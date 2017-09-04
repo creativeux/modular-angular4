@@ -1,6 +1,12 @@
 // Protractor configuration file, see link for more information
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
+// NOTE: This is here to make the 'specs' path and the 'project' path absolute.
+// If this isn't done, the specs path is relative to the execution location
+// and the project path is relative to this file's location.
+var path = require('path');
+const rootPath = path.resolve('./');
+
 const {
   SpecReporter
 } = require('jasmine-spec-reporter');
@@ -8,7 +14,7 @@ const {
 exports.config = {
   allScriptsTimeout: 11000,
   specs: [
-    './e2e/**/*.e2e-spec.ts'
+    rootPath + '/test/e2e/**/*.e2e-spec.ts'
   ],
   capabilities: {
     'browserName': 'chrome'
@@ -23,7 +29,7 @@ exports.config = {
   },
   onPrepare() {
     require('ts-node').register({
-      project: 'test/e2e/tsconfig.e2e.json'
+      project: rootPath + '/test/e2e/tsconfig.e2e.json'
     });
     jasmine.getEnv().addReporter(new SpecReporter({
       spec: {
