@@ -22,10 +22,10 @@
         "shared/assets/styles/styles.scss"
       ],
       "scripts": [],
-      "environmentSource": "environments/environment.ts",
+      "environmentSource": "config/environments/environment.ts",
       "environments": {
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
+        "dev": "config/environments/environment.ts",
+        "prod": "config/environments/environment.prod.ts"
       }
     }
   ],
@@ -44,7 +44,7 @@
       "exclude": "**/node_modules/**"
     },
     {
-      "project": "e2e/tsconfig.e2e.json",
+      "project": "test/e2e/tsconfig.e2e.json",
       "exclude": "**/node_modules/**"
     }
   ],
