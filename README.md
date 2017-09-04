@@ -4,10 +4,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Changes Aaron made
 1. Moved as many configuration files into the `/config` directory to clean up the cluttered root.
-2. Group modules within `/src` as peers to `app` for organization. Added a shared module for experimentation.
-3. Moved global styling into the `shared/assets/styles` folder. All components will have encapsulated SASS.
-4. Moved the `hello` component that is by default bundled with `app` into the `core` module.
-5. Moved `/e2e` into `/test` to compartmentalize QA-generated tests. I also see page-level e2e and component integration tests as different things, so this would be a container for non-unit integration and e2e tests.
+2. Added SASS linting via `.sass-lint.yml` in the `/config` directory.
+3. Extended the AirBnb JavaScript linting standard using the `tslint-config-airbnb` package.
+4. Group modules within `/src` as peers to `app` for organization. Added a shared module for experimentation.
+5. Moved global styling into the `shared/assets/styles` folder. Not sure if this was the best idea, but it seemed like a logical start. All components will have encapsulated SASS.
+6. Moved the `hello` component that is by default bundled with `app` into the `core` module.
+7. Moved `/e2e` into `/test` to compartmentalize QA-generated tests. I also see page-level e2e and component integration tests as different things, so this would be a container for non-unit integration and e2e tests.
 
 ## Development server
 
