@@ -14,7 +14,7 @@ const {
 exports.config = {
   allScriptsTimeout: 11000,
   specs: [
-    rootPath + '/test/e2e/**/*.e2e-spec.ts'
+    rootPath.concat('/test/e2e/**/*.e2e-spec.ts')
   ],
   capabilities: {
     'browserName': 'chrome'
@@ -29,7 +29,7 @@ exports.config = {
   },
   onPrepare() {
     require('ts-node').register({
-      project: rootPath + '/test/e2e/tsconfig.e2e.json'
+      project: rootPath.concat('/test/e2e/tsconfig.e2e.json')
     });
     jasmine.getEnv().addReporter(new SpecReporter({
       spec: {
