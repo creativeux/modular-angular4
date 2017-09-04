@@ -7,7 +7,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "sass-lint": "sass-lint -c .sass-lint.yml -v -q",
+    "sass-lint": "sass-lint -c config/.sass-lint.yml -v -q",
     "lint": "npm run sass-lint && ng lint",
     "e2e": "ng e2e"
   },
