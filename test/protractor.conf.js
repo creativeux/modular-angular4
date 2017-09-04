@@ -4,7 +4,7 @@
 // NOTE: This is here to make the 'specs' path and the 'project' path absolute.
 // If this isn't done, the specs path is relative to the execution location
 // and the project path is relative to this file's location.
-var path = require('path');
+const path = require('path');
 const rootPath = path.resolve('./');
 
 const {
